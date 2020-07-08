@@ -27,9 +27,11 @@ from .common_holidays import (
 )
 from .market_calendar import MarketCalendar #HolidayCalendar
 
-WEEKDAYS = (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY)
+WEEKDAYS = (0, 1, 2, 3, 4)
 
 NewYearsDay = new_years_day()
+
+Holiday()
 
 DayBeforeEpiphany = Holiday(
     'Day Before Epiphany',
