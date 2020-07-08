@@ -25,7 +25,9 @@ from .common_holidays import (
     boxing_day,
     new_years_eve,
 )
-from .market_calendar import MarketCalendar, WEEKDAYS  #HolidayCalendar
+from .market_calendar import MarketCalendar #HolidayCalendar
+
+WEEKDAYS = (MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY)
 
 NewYearsDay = new_years_day()
 
