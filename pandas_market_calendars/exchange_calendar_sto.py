@@ -31,8 +31,6 @@ WEEKDAYS = (0, 1, 2, 3, 4)
 
 NewYearsDay = new_years_day()
 
-Holiday()
-
 DayBeforeEpiphany = Holiday(
     'Day Before Epiphany',
     month=1,
