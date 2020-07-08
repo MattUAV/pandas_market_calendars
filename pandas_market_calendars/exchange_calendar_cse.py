@@ -50,7 +50,7 @@ BoxingDay = boxing_day()
 NewYearsEve = new_years_eve()
 
 
-class CSExchangeCalendar(MarketCalendar):
+class CSEExchangeCalendar(MarketCalendar):
     """
     Calendar for the Copenhagen Stock Exchange in Denmark.
     Open Time: 9:00 AM, CET (Central European Time)
