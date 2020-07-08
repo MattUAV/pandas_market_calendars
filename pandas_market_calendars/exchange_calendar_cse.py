@@ -1,6 +1,7 @@
 from datetime import time
 
 from pandas.tseries.holiday import (
+    AbstractHolidayCalendar,
     Holiday,
     GoodFriday,
     Easter,
@@ -19,7 +20,7 @@ from .common_holidays import (
     boxing_day,
     new_years_eve,
 )
-from .market_calendar import HolidayCalendar, MarketCalendar
+from .market_calendar import MarketCalendar #HolidayCalendar
 
 NewYearsDay = new_years_day()
 
@@ -92,7 +93,7 @@ class CSExchangeCalendar(MarketCalendar):
 
     @property
     def regular_holidays(self):
-        return HolidayCalendar([
+        return AbstractHolidayCalendar(rules=[
             NewYearsDay,
             MaundyThursday,
             GoodFriday,

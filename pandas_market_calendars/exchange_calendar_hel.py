@@ -1,6 +1,6 @@
 from datetime import time
 
-from pandas.tseries.holiday import Holiday, GoodFriday, EasterMonday
+from pandas.tseries.holiday import Holiday, GoodFriday, EasterMonday, AbstractHolidayCalendar
 from pytz import timezone
 
 from .common_holidays import (
@@ -14,7 +14,7 @@ from .common_holidays import (
     boxing_day,
     new_years_eve,
 )
-from .market_calendar import HolidayCalendar, MarketCalendar
+from .market_calendar import MarketCalendar #HolidayCalendar
 
 NewYearsDay = new_years_day()
 
@@ -77,7 +77,7 @@ class HELExchangeCalendar(MarketCalendar):
 
     @property
     def regular_holidays(self):
-        return HolidayCalendar([
+        return AbstractHolidayCalendar(rules=[
             NewYearsDay,
             Epiphany,
             GoodFriday,
